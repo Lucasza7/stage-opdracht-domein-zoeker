@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --background-color: #f5f6fa;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#results, #cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#results li, #cart-items li {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#results button {
+    background-color: var(--success-color);
+}
+
+#results button:hover {
+    background-color: #219a52;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+a button {
+    background-color: var(--primary-color);
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+a button:hover {
+    background-color: #243444;
+}
+
+/* Voor niet-beschikbare domeinen */
+#results li span:last-child {
+    color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #results li, #cart-items li {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
